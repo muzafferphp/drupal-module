@@ -1,0 +1,13 @@
+<?php
+function registration_page_attachments(array &$attachments) {
+  //added css and js file
+  $attachments['#attached']['library'][] = 'registration/registration_cssfile';
+}
+
+function registration_theme($existing, $type, $theme, $path) {
+    return array(
+        'article_list'=>array(
+            'variables'=>array('items' => array(),'title'=>'')
+            )
+        );
+}

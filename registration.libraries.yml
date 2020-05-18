@@ -1,0 +1,7 @@
+registration_cssfile:
+  version: 2.x
+  css:
+    theme:
+      css/custom.css: {}
+  js:
+    js/custom.js: {}

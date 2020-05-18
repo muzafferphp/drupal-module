@@ -1,0 +1,32 @@
+registration.form:
+ path: '/registration'
+ defaults:
+   _title: 'Registration form'
+   _form: '\Drupal\registration\Form\RegistrationForm'
+ requirements:
+   _permission: 'access content'
+   
+    
+registration.paypal:
+ path: '/paypal/test'
+ defaults:
+   _title: 'Pay for register'
+   _controller: '\Drupal\registration\Controller\HelloController::paypal'
+ requirements:
+   _permission: 'access content'
+    
+registration.thankyou:
+ path: '/hello/details/thankyou'
+ defaults:
+   _title: 'Thank You Page'
+   _controller: '\Drupal\registration\Controller\HelloController::successpage'
+ requirements:
+   _permission: 'access content'
+   
+registration.article_list:
+ path: '/paypal'
+ defaults:
+   _title: 'Article Page'
+   _controller: '\Drupal\registration\Controller\HelloController::page'
+ requirements:
+   _permission: 'access content'

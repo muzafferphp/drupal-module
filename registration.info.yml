@@ -1,0 +1,5 @@
+name: Registration
+description: A Registration form to enter user details for register.
+core: 8.x
+package: Custom
+type: module

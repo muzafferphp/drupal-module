@@ -1,0 +1,36 @@
+
+<table><tbody>
+  {% for key, value in items %}
+  <tbody><tr><td>Name:</td><td>{{ value.name }}</td></tr>
+  <tbody><tr><td>Phone:</td><td>{{ value.phone }}</td></tr>
+  <tbody><tr><td>Email:</td><td>{{ value.email }}</td></tr>
+  <tbody><tr><td>Address:</td><td>{{ value.address }}</td></tr>
+  <tbody><tr><td>Price:</td><td>{{ value.price }}</td></tr>
+  <tbody><tr><td>comment:</td><td>{{ value.comment }}</td></tr>
+{% endfor %}
+</tbody></table>
+<div class="content">
+  {% for key, value in items %}     
+<form name="paypal" data-drupal-selector="paypal2" action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypal2" accept-charset="UTF-8" data-drupal-form-fields="edit-submit">
+<input data-drupal-selector="edit-item-number" type="hidden" name="item_number" value="0">
+<input data-drupal-selector="edit-item-name" type="hidden" name="item_name" value="Online Registration and Payment">
+<input data-drupal-selector="edit-amount" type="hidden" name="amount" value="{{ value.price }}">
+<input data-drupal-selector="edit-cmd" type="hidden" name="cmd" value="_xclick">
+<input data-drupal-selector="edit-currency-code" type="hidden" name="currency_code" value="USD">
+<input data-drupal-selector="edit-business" type="hidden" name="business" value="washingtonarkfoundation@gmail.com">
+<input data-drupal-selector="edit-rm" type="hidden" name="rm" value="2">
+<input data-drupal-selector="edit-return" type="hidden" name="return" value="http://www.ark-usa.org/thank_you">
+<input data-drupal-selector="edit-notify-url" type="hidden" name="notify_url" value="http://www.ark-usa.org/notify">
+<input data-drupal-selector="form-2p8acxcz8xcyzlipk81twxpbdtvrf1zx5-ezoauj9mk" type="hidden" name="form_build_id" value="form-2p8aCXcZ8xCyzlIPK81tWxpbdtvRF1zX5-EZOAuJ9Mk">
+<input data-drupal-selector="edit-paypal2-form-token" type="hidden" name="form_token" value="xxPCp10oDg2EVgRZAh8o5_mt1kr5Nw6Ve15zE_KiVhI">
+<input data-drupal-selector="edit-paypal2" type="hidden" name="form_id" value="paypal2">
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Click here to pay" class="button button--primary js-form-submit form-submit">
+
+</div>
+</form>
+{% endfor %}
+</div>
+
+
+
